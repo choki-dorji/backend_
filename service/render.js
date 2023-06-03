@@ -75,9 +75,9 @@ exports.getBlocks = async (req, res) => {
   try {
     axios
       .all([
-        axios.get(API + "api/blocks"),
-        axios.get(API + "room/api/rooms"),
-        axios.get(API + "recent/recent"),
+        axios.get(API + "/api/blocks"),
+        axios.get(API + "/room/api/rooms"),
+        axios.get(API + "/recent/recent"),
         axios.get("https://gcit-user-management.onrender.com/api/v1/UM/join", {
           headers: {
             Authorization: "Bearer " + token,
