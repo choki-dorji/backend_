@@ -360,7 +360,7 @@
 
  spans.forEach(span => {
    const blockId = span.getAttribute('blockId');
-   fetch(`http://localhost:5000/api/${blockId}/students/count`)
+   fetch(`https://gcithas.onrender.com/api/${blockId}/students/count`)
    .then(response => response.json())
    .then(data => {
      span.textContent = data + " slots";
@@ -409,7 +409,7 @@ function submitNewForm(event) {
     const queryParams = new URLSearchParams(window.location.search);
     const year = queryParams.get("year");
 
-    fetch(`http://localhost:5000/Allocate/api/years/${year}`, {
+    fetch(`https://gcithas.onrender.com/Allocate/api/years/${year}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
