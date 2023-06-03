@@ -4,7 +4,7 @@ const Request = request.Request;
 require("dotenv").config();
 
 // const API = "http://localhost:5000/";
-const API = process.env.HOST;
+const API = process.env.HOST + "/";
 console.log("API: " + API);
 
 exports.StudentDashboard = (req, res) => {
