@@ -122,7 +122,7 @@
     console.log(sid);
     // Make the AJAX request to the API
     $.ajax({
-        url: `http://localhost:5000/students/getroom/${sid}`,
+        url: `https://gcithas.onrender.com/students/getroom/${sid}`,
         method: "GET",
         success: function(response) {
             console.log("response", response);
