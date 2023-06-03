@@ -5,7 +5,7 @@ const Request = request.Request;
 require("dotenv").config();
 
 // const API = "http://localhost:5000/";
-const API = process.env.HOST;
+const API = process.env.HOST + "/";
 console.log("API: " + API);
 
 exports.add_room = async (req, res) => {
@@ -75,9 +75,9 @@ exports.getBlocks = async (req, res) => {
   try {
     axios
       .all([
-        axios.get(API + "/api/blocks"),
-        axios.get(API + "/room/api/rooms"),
-        axios.get(API + "/recent/recent"),
+        axios.get(API + "api/blocks"),
+        axios.get(API + "room/api/rooms"),
+        axios.get(API + "recent/recent"),
         axios.get("https://gcit-user-management.onrender.com/api/v1/UM/join", {
           headers: {
             Authorization: "Bearer " + token,
