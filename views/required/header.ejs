@@ -198,6 +198,9 @@ position:relative
 .search-container a{
 margin-left: 1rem;
 }
+.color{
+ color: "#ff4b13";
+}
   </style>
 </head>
 
@@ -765,17 +768,18 @@ if (activeLink) {
   const resultLink = document.createElement('a');
 
   resultItem.className="search-container"
+  
 
   resultLink.href = '#';
   resultLink.textContent = result.name;
 
   if (result.type === 'block') {
     const iconElement = document.createElement('i');
-    iconElement.className = 'far fa-building'; // Building icon class
+    iconElement.className = 'far fa-building color'; // Building icon class
     resultItem.appendChild(iconElement);
   } else if (result.type === 'room') {
     const iconElement = document.createElement('i');
-    iconElement.className = 'bx bx-home'; // Room icon class
+    iconElement.className = 'bx bx-home color'; // Room icon class
     resultItem.appendChild(iconElement);
   } else if (result.type === 'student') {
     const imageElement = document.createElement('img');
